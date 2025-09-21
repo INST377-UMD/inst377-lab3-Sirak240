@@ -1,0 +1,149 @@
+/* Handout-style theme (meets rubric while matching the mock) */
+
+/* Color palette approximating the screenshot */
+:root {
+  --page-bg: #e9cdb0;        /* sandy page background */
+  --header-bg: #615247;      /* brownish header container */
+  --header-strip: #2a2f3a;   /* dark gray separator bars */
+  --blue: #0b3ea9;           /* strong blue strip */
+  --nav-text: #ffffff;
+
+  --mint: #7ed8b3;           /* left panel mint green */
+  --cyan: #4fe3f2;           /* right panel cyan */
+  --cyan-hover: #32cadd;     /* hover darker */
+
+  --card-border: #2a2f3a;    /* dark border like the mock */
+  --ink: #1f2937;
+  --link: #ffffff;
+  --link-hover: #dfe7ff;
+}
+
+/* Global font */
+html, body {
+  font-family: "Segoe UI", "Trebuchet MS", Verdana, Tahoma, sans-serif; /* rubric: custom font */
+  margin: 0;
+  background: var(--page-bg);
+  color: var(--ink);
+}
+
+/* Centered page width like the mock */
+.wrap {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 12px;
+}
+
+/* Header + footer share same class (rubric 2a) */
+.bar {
+  text-align: center;                 /* rubric 2c */
+  color: #fff;
+  padding: 8px 0;                     /* rubric 2e */
+  margin: 0 0 10px 0;                 /* rubric 2e */
+}
+
+.header, .footer { background: var(--header-bg); } /* rubric 2d different color */
+
+/* Header title */
+.bar h1 { margin: 4px 0; font-size: 20px; } /* rubric 2b H1 */
+
+/* Thin & fat dark separators like screenshot */
+.separator {
+  height: 10px;
+  background: var(--header-strip);
+}
+.separator.fat { height: 24px; margin: 8px 0; }
+
+/* Blue nav strip and horizontal nav (rubric 6) */
+.blue-strip { background: var(--blue); }
+.nav {
+  list-style: none;                   /* no bullets */
+  display: flex;                      /* horizontal */
+  gap: 14px;
+  margin: 0;
+  padding: 6px 0;
+  justify-content: flex-start;
+}
+.nav a {
+  color: var(--nav-text);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: background 120ms ease, color 120ms ease;
+}
+.nav a:hover {                        /* rubric 6b */
+  background: rgba(255,255,255,0.2);
+  color: var(--link-hover);
+}
+
+/* Body row: main + sidebar same line with percentage widths (rubric 3a–3c) */
+.row {
+  display: flex;
+  gap: 12px;
+  align-items: stretch;
+  margin: 10px 0 16px;
+}
+.main { width: 70%; }                 /* rubric 3a */
+.sidebar { width: 28%; }              /* rubric 3b */
+
+/* Panels (cards) with dark border like mock */
+.card {
+  padding: 10px;                      /* rubric 3d */
+  margin: 4px 0;                      /* rubric 3d */
+  border: 3px solid var(--card-border);
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: none;
+}
+.card h2, .card h3 { margin: 6px 0 8px; }
+
+/* Specific fills to match screenshot shades */
+.mint { background: var(--mint); }
+.cyan { background: var(--cyan); transition: background 160ms ease; }  /* rubric 5b */
+.cyan:hover { background: var(--cyan-hover); }                         /* rubric 5b */
+
+/* Rules list */
+.rules { margin: 6px 0 0 18px; }
+.hint { font-size: 12px; opacity: .75; }
+
+/* Form — name label, select RPS, required name, focus width animation (rubric 4) */
+form {
+  display: grid;
+  gap: 8px;
+  max-width: 520px;
+}
+label { font-weight: 700; }
+input[type="text"], select {
+  width: 60%;
+  padding: 6px 8px;
+  border: 1px solid #333;
+  border-radius: 4px;
+  background: #fff;
+  transition: width 200ms ease;
+}
+input[type="text"]:focus {
+  outline: none;
+  width: 80%;
+}
+
+/* Small inline buttons like mock */
+.btn-row { display: flex; gap: 8px; align-items: center; }
+button.small {
+  padding: 2px 8px;
+  font-size: 12px;
+  border: 1px solid #2a2f3a;
+  background: #f5f5f5;
+  cursor: pointer;
+  border-radius: 4px;
+}
+button.small:hover { background: #e8e8e8; }
+button.small.outline { background: transparent; }
+
+/* Footer note bar mimic text */
+.muted-note {
+  background: transparent;
+  color: #2a2f3a;
+  text-align: center;
+  font-size: 12px;
+  padding: 6px 0 0;
+}
