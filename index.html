@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>INST377 Lab 3 — Rock Paper Scissors</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Top header bar -->
+  <header class="bar header">
+    <div class="wrap">
+      <h1>Lab 3 — Rock Paper Scissors</h1>
+    </div>
+  </header>
+
+  <!-- Dark thin separator like the mock -->
+  <div class="separator"></div>
+
+  <!-- Blue nav strip -->
+  <nav class="blue-strip">
+    <div class="wrap">
+      <ul class="nav">
+        <li><a href="https://www.youtube.com" target="_blank" rel="noopener">Video Player</a></li>
+        <li><a href="https://www.coolmathgames.com" target="_blank" rel="noopener">Games</a></li>
+        <li><a href="https://trends.google.com" target="_blank" rel="noopener">Trends</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main content row -->
+  <main class="wrap row">
+    <!-- Left panel (mint green) -->
+    <section class="main card mint">
+      <h2>Please choose one of the following.</h2>
+      <form>
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" placeholder="Your name" required />
+
+        <label for="choice">Choose your move</label>
+        <select id="choice" name="choice">
+          <option>Rock</option>
+          <option>Paper</option>
+          <option>Scissors</option>
+        </select>
+
+        <div class="btn-row">
+          <button type="submit" class="small">Submit</button>
+          <button type="reset" class="small outline">Reset</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Right panel (cyan) -->
+    <aside class="sidebar card cyan">
+      <h3>Rules</h3>
+      <p>You must choose Rock, Paper or Scissors</p>
+      <h4>The Combos are as follows:</h4>
+      <ul class="rules">
+        <li>Rock beats Scissors</li>
+        <li>Paper beats Rock</li>
+        <li>Scissors beats Paper</li>
+      </ul>
+      <p class="hint">Hover over this panel to see a color change.</p>
+    </aside>
+  </main>
+
+  <!-- Gray bars like the mock -->
+  <div class="separator fat"></div>
+  <div class="wrap muted-note">This is a footer / note bar. I should add… an interesting… bit. I am getting better.</div>
+  <div class="separator fat"></div>
+
+  <!-- Footer -->
+  <footer class="bar footer">
+    <div class="wrap">
+      <p>&copy; 2025 INST377 – Lab 3</p>
+    </div>
+  </footer>
+</body>
+</html>
